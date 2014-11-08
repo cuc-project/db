@@ -1,0 +1,11 @@
+.wrapper
+  %h1 CUC DB
+  %form.search
+    %input{name: "search", placeholder:"Caută în textul intrebării", autocomplete: 'off'}
+  #results
+    = yield
+#footer
+  %p
+    Se caută prin 30 întrebări. Ultima actualizare: #{Date.today}.
+    %a{href: "http://github.com/minivan/cucdb"}
+      info

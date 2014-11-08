@@ -1,0 +1,174 @@
+//colors
+$color_mountain_mist_approx: #999;
+$color_celeste_approx: #ccc;
+$white: white;
+$color_black_2_approx: rgba(1,1,1, 0.02);
+$color_cornflower_blue_approx: #6af;
+$color_sea_pink_approx: #f39292;
+
+//fonts
+$font_0: Source Sans Pro;
+$font_1: sans-serif;
+
+//@extend-elements
+//original selectors
+//html, body
+%extend_1 {
+  font-family: $font_0, $font_1;
+  margin: 0;
+  height: 100%;
+}
+
+
+html {
+  @extend %extend_1;
+}
+body {
+  @extend %extend_1;
+}
+* {
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -42px;
+  &:after {
+    content: "";
+    display: block;
+    height: 42px;
+    text-align: center;
+  }
+}
+#footer {
+  height: 42px;
+  text-align: center;
+  p {
+    margin: auto;
+    padding-top: 10px;
+    width: 400px;
+    color: $color_mountain_mist_approx;
+    text-transform: uppercase;
+    font-size: 9pt;
+    border-top: 1px solid $color_celeste_approx;
+  }
+  a {
+    text-decoration: none;
+    color: $color_mountain_mist_approx;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+h1 {
+  text-align: center;
+  padding: 30px;
+}
+.search {
+  text-align: center;
+  input {
+    width: 400px;
+    height: 30px;
+    border: 2px solid $color_celeste_approx;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    font-size: 14pt;
+    padding: 5px;
+    padding-left: 10px;
+    font-family: $font_0, $font_1;
+    &:focus {
+      border: 2px solid $color_cornflower_blue_approx;
+      outline: none;
+    }
+  }
+}
+#results {
+  width: 700px;
+  margin: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.question {
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  border: 2px solid $color_celeste_approx;
+  padding: 10px;
+  margin: 10px;
+  .author {
+    float: right;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 9pt;
+  }
+  &:hover {
+    background: $color_black_2_approx;
+    .author {
+      color: $color_mountain_mist_approx;
+      padding-top: 5px;
+    }
+    .expand {
+      color: $color_mountain_mist_approx;
+    }
+  }
+  .expand {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 9pt;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.question-header {
+  color: $color_mountain_mist_approx;
+  text-transform: uppercase;
+  font-size: 9pt;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $color_celeste_approx;
+}
+.question-body {
+  padding: 10px 0;
+}
+.answer {
+  padding: 5px 0;
+}
+.comment {
+  color: $color_mountain_mist_approx;
+}
+::-webkit-input-placeholder {
+    color: $color_celeste_approx;
+    font-family: $font_0, $font_1;
+  }
+::-moz-placeholder {
+    color: $color_celeste_approx;
+    font-family: $font_0, $font_1;
+  }
+:-moz-placeholder {
+  color: $color_celeste_approx;
+  font-family: $font_0, $font_1;
+}
+:-ms-input-placeholder {
+  color: $color_celeste_approx;
+  font-family: $font_0, $font_1;
+}
+.question-footer.collapsed div {
+  display: none;
+}
+span.match {
+  color: $color_cornflower_blue_approx;
+}
+p.found {
+  color: $color_celeste_approx;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+input.error {
+  border: 2px solid $color_sea_pink_approx;
+  &:focus {
+    border: 2px solid $color_sea_pink_approx;
+  }
+}
