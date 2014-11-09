@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Cucdb
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin,latin-ext'
+    = csrf_meta_tags
+  %body
+    .wrapper
+      %h1 CUC DB
+      %form.search{ action: "search", method: :get}
+        = text_field_tag(:query, nil, placeholder:"Caută în textul intrebării", autocomplete: 'off')
+      #results
+        = yield
+    #footer
+      %p
+        Se caută prin 30 întrebări. Ultima actualizare: #{Date.today}.
+        %a{href: "http://github.com/minivan/cucdb"}
+          info
