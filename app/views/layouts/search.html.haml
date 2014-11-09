@@ -10,7 +10,7 @@
     .wrapper
       %h1 CUC DB
       %form.search{ action: "search", method: :get}
-        = text_field_tag(:query, nil, placeholder:"Caută în textul intrebării", autocomplete: 'off')
+        = text_field_tag(:query, nil, placeholder:"Caută în textul intrebării", autocomplete: 'off', value: @terms)
       #results
         = yield
     #footer

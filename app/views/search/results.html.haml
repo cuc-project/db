@@ -1,0 +1,18 @@
+%p.found
+  Au fost găsite #{@results.size} întrebări
+%ul
+  - @results.each do |result|
+    = render result
+
+
+/ TODO: move that somewhere else
+:coffeescript
+  $("a.expand").click (event) ->
+    $(@).parent().toggleClass("collapsed")
+
+    currentText = $(this).text()
+    if currentText is "Ascunde răspunsul"
+      $(@).text("Arată răspunsul")
+    else
+      $(@).text("Ascunde răspunsul")
+    event.preventDefault()

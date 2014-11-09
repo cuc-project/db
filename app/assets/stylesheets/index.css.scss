@@ -154,6 +154,14 @@ ul {
   color: $color_celeste_approx;
   font-family: $font_0, $font_1;
 }
+
+
+.question-footer {
+  padding-top: 5px;
+  border-top: 1px solid #ccc;
+  min-height: 15px;
+}
+
 .question-footer.collapsed div {
   display: none;
 }
