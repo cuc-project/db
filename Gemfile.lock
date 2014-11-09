@@ -127,6 +127,10 @@ GEM
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     pg (0.17.1)
+    pg_search (0.7.8)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -255,6 +259,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   pg
+  pg_search
   pry-rails
   pry-rescue
   quiet_assets

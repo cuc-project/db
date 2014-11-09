@@ -12,6 +12,7 @@ gem 'spring',        group: :development
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'haml-rails'
 gem 'pg'
+gem 'pg_search'
 gem 'thin'
 group :development do
   gem 'better_errors'
