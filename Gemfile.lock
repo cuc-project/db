@@ -124,6 +124,7 @@ GEM
     mini_portile (0.6.1)
     minitest (5.4.2)
     multi_json (1.10.1)
+    netrc (0.7.9)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     pg (0.17.1)
@@ -169,6 +170,8 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.2)
       json (~> 1.4)
+    rest_client (1.8.1)
+      netrc (~> 0.7.7)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -268,6 +271,7 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  rest_client
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

@@ -13,6 +13,7 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'haml-rails'
 gem 'pg'
 gem 'pg_search'
+gem 'rest_client'
 gem 'thin'
 group :development do
   gem 'better_errors'
