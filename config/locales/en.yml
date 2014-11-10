@@ -20,4 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    pagination:
+      first: "&laquo; Prima"
+      last: "Ultima &raquo;"
+      previous: "&lsaquo; Precedenta"
+      next: "Următoarea &rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Nu a fost găsită nicio întrebare"
+          one: "A fost găsită o singură întrebare"
+          other: "Toate întrebările"
+      more_pages:
+        display_entries: "Întrebările <b>%{first}&nbsp;-&nbsp;%{last}</b> din <b>%{total}</b> total"
