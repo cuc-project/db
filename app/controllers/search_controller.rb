@@ -4,8 +4,10 @@ class SearchController < ApplicationController
   end
 
   def search
-    @terms = sanitize_terms(params["query"])
-    @results = Question.search_by_text(@terms)
+    @terms   = sanitize_terms(params["query"])
+    results  = Question.search_by_text(@terms)
+    @count   = results.size
+    @results = results.page(params[:page])
     render :results
   end
 

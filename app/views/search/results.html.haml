@@ -1,9 +1,9 @@
 %p.found
-  Au fost găsite #{@results.size} întrebări
+  Au fost găsite #{@count} întrebări
+= paginate @results
 %ul
   - @results.each do |result|
     = render result
-
 
 / TODO: move that somewhere else
 :coffeescript
