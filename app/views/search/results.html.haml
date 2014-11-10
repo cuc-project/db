@@ -1,5 +1,5 @@
 %p.found
-  Au fost găsite #{@count} întrebări
+  #{page_entries_info @results}
 = paginate @results
 %ul
   - @results.each do |result|
