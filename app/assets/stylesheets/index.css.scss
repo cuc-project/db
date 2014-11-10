@@ -155,6 +155,20 @@ ul {
   font-family: $font_0, $font_1;
 }
 
+nav {
+  &.pagination {
+    text-align: center;
+    color: $color_mountain_mist_approx;
+    padding-bottom: 10px;
+    a {
+      color: $color_mountain_mist_approx;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
 
 .question-footer {
   padding-top: 5px;

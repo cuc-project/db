@@ -1,9 +1,9 @@
 %p.found
   #{page_entries_info @results}
-= paginate @results
 %ul
   - @results.each do |result|
     = render result
+= paginate @results
 
 / TODO: move that somewhere else
 :coffeescript
