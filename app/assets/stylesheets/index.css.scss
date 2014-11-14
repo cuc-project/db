@@ -2,7 +2,7 @@
 $color_mountain_mist_approx: #999;
 $color_celeste_approx: #ccc;
 $white: white;
-$color_black_2_approx: rgba(1,1,1, 0.02);
+$color_black_2_approx: rgba(1,1,1, 0.01);
 $color_cornflower_blue_approx: #6af;
 $color_sea_pink_approx: #f39292;
 
@@ -17,6 +17,12 @@ $font_1: sans-serif;
   font-family: $font_0, $font_1;
   margin: 0;
   height: 100%;
+}
+
+hr {
+  background: $color_celeste_approx;
+  height: 1px;
+  border: 0;
 }
 
 
@@ -68,7 +74,7 @@ h1 {
   input {
     width: 400px;
     height: 30px;
-    border: 2px solid $color_celeste_approx;
+    border: 1px solid $color_celeste_approx;
     //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
     border-radius: 5px;
     font-size: 14pt;
@@ -76,7 +82,7 @@ h1 {
     padding-left: 10px;
     font-family: $font_0, $font_1;
     &:focus {
-      border: 2px solid $color_cornflower_blue_approx;
+      border: 1px solid $color_cornflower_blue_approx;
       outline: none;
     }
   }
@@ -91,43 +97,42 @@ ul {
 }
 .question {
   //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-  border-radius: 5px;
-  border: 2px solid $color_celeste_approx;
   padding: 10px;
   margin: 10px;
+  border: 1px solid $white;
   .author {
-    float: right;
-    color: $white;
     text-decoration: none;
     text-transform: uppercase;
+    float: right;
     font-size: 9pt;
+    color: $color_mountain_mist_approx;
   }
   &:hover {
     background: $color_black_2_approx;
-    .author {
-      color: $color_mountain_mist_approx;
-      padding-top: 5px;
-    }
-    .expand {
-      color: $color_mountain_mist_approx;
-    }
+    border: 1px solid $color_celeste_approx;
   }
-  .expand {
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 9pt;
-    &:hover {
-      text-decoration: underline;
-    }
+
+}
+.hidden {
+  display: none;
+}
+.collapsed {
+  width: 100%;
+  text-align: center;
+
+  &:hover {
+    background: #eee;
   }
+}
+a:hover {
+  color: $color_cornflower_blue_approx;
+  cursor: pointer;
 }
 .question-header {
   color: $color_mountain_mist_approx;
   text-transform: uppercase;
   font-size: 9pt;
   padding-bottom: 5px;
-  border-bottom: 1px solid $color_celeste_approx;
 }
 .question-body {
   padding: 10px 0;
@@ -159,7 +164,7 @@ nav {
   &.pagination {
     text-align: center;
     color: $color_mountain_mist_approx;
-    padding-bottom: 10px;
+    padding: 10px;
     a {
       color: $color_mountain_mist_approx;
       text-decoration: none;
@@ -170,15 +175,6 @@ nav {
   }
 }
 
-.question-footer {
-  padding-top: 5px;
-  border-top: 1px solid #ccc;
-  min-height: 15px;
-}
-
-.question-footer.collapsed div {
-  display: none;
-}
 span.match {
   color: $color_cornflower_blue_approx;
 }

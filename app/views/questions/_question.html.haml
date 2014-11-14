@@ -1,15 +1,17 @@
 %li.question
   .question-header
     Nr. #{question.number} din #{question.game_slug}
+    .author
+      %a
+        #{question.authors_names}
   .question-body
     = simple_format(highlight_search(question.text, @terms))
-  .question-footer.collapsed
-    .answer
+  .question-footer
+    .collapsed
+      %i.fa.fa-angle-double-up.fa-angle-double-down
+    .extras.hidden
+      .answer
       Răspuns: #{question.answer}
-    - if question.comment
-      .comment
-        Comentariu: #{question.comment}
-    .author
-      Autor: #{question.authors_names}
-    %a.expand{href: "#"}
-      Arată răspunsul
+      - if question.comment
+        .comment
+          Comentariu: #{question.comment}
