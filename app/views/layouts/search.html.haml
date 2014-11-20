@@ -18,7 +18,7 @@
     #footer
       %p
 
-        Se caută prin #{@count} întrebări. Ultima actualizare: #{Date.today}.
-        %a{href: "http://github.com/minivan/cucdb"}
+        Se caută prin #{@count} întrebări. Ultima actualizare: #{@last_sync_date.strftime("%F")}.
+        %a{href: "http://github.com/cuc-project/db"}
           info
     = render(partial: 'layouts/analytics') if Rails.env.production?
