@@ -16,6 +16,7 @@ gem 'pg_search'
 gem 'rest_client'
 gem 'thin'
 gem 'kaminari'
+gem 'whenever', :require => false
 
 group :development do
   gem 'guard-bundler'
