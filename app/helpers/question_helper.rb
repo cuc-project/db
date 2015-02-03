@@ -3,6 +3,7 @@ module QuestionHelper
     return text unless terms
 
     #TODO: please fix this, i feel very bad about it
+    #TODO: I tried replacing it with Rails' highlight, but it didn't work.
     prefix = "%<%"
     postfix = "%>%"
     terms.sort_by { |i| -i.length }.each do |term|
