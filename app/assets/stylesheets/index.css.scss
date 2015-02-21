@@ -5,6 +5,7 @@ $white: white;
 $color_black_2_approx: rgba(1,1,1, 0.01);
 $color_cornflower_blue_approx: #6af;
 $color_sea_pink_approx: #f39292;
+$black: black;
 
 //fonts
 $font_0: Source Sans Pro;
@@ -70,6 +71,26 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+ul.nav {
+  list-style: none;
+  text-align: center;
+  padding-bottom: 20px;
+
+  li {
+    display: inline;
+    list-style-type: none;
+
+    a {
+      padding: 10px;
+      color: $black;
+      text-decoration: none;
+      &:hover {
+        color: $color_cornflower_blue_approx;
+      }
+    }
+  }
+}
+
 .search {
   text-align: center;
   input {
