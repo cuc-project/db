@@ -1,0 +1,4 @@
+%form.search{ action: "search", method: :get}
+  = text_field_tag(:query, nil, placeholder:"Caută în textul intrebării", autocomplete: 'off', value: @terms)
+#results
+  = yield

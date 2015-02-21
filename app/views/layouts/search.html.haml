@@ -10,11 +10,10 @@
     = csrf_meta_tags
   %body
     .wrapper
-      %h1 CUC DB
-      %form.search{ action: "search", method: :get}
-        = text_field_tag(:query, nil, placeholder:"Caută în textul intrebării", autocomplete: 'off', value: @terms)
-      #results
-        = yield
+      .logo
+        %a
+          =image_tag("owl1.png")
+      = yield
     #footer
       %p
 

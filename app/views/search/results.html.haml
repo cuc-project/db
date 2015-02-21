@@ -1,13 +1,16 @@
-%p.found
-  #{page_entries_info @results}
-%ul
-  - @results.each do |result|
-    = render result
-    %hr
-= paginate @results
+%form.search{ action: "search", method: :get}
+  = text_field_tag(:query, nil, placeholder:"Caută în textul intrebării", autocomplete: 'off', value: @terms)
+#results
+  %p.found
+    #{page_entries_info @results}
+  %ul
+    - @results.each do |result|
+      = render result
+      %hr
+  = paginate @results
 
-:coffeescript
-  $ ->
-    $(".collapsed").click ->
-      $(@).siblings(".extras").toggleClass("hidden")
-      $(@).find("i").toggleClass("fa-angle-double-down")
+  :coffeescript
+    $ ->
+      $(".collapsed").click ->
+        $(@).siblings(".extras").toggleClass("hidden")
+        $(@).find("i").toggleClass("fa-angle-double-down")
