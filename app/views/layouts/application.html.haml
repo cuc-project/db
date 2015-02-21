@@ -15,14 +15,14 @@
           =image_tag("owl1.png")
       %ul.nav
         %li
-          %a{href: "#" } Căutare
-          %a{href: "#" } Pachete
+          %a{href: root_path } Căutare
+          %a{href: pachete_path } Pachete
 
       = yield
     #footer
       %p
 
-        Se caută prin #{@count} întrebări. Ultima actualizare: #{@last_sync_date.strftime("%F")}.
+        Se caută prin #{question_count} întrebări. Ultima actualizare: #{last_sync_date}.
         %a{href: "http://github.com/cuc-project/db"}
           info
     = render(partial: 'layouts/analytics') if Rails.env.production?
