@@ -1,5 +1,4 @@
 class SearchController < ApplicationController
-  layout "search"
   def index
     @count = Question.count
     @last_sync_date = Question.first.created_at
