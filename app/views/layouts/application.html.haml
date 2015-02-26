@@ -11,18 +11,17 @@
   %body
     .wrapper
       .logo
-        %a{href: root_path}
+        = link_to root_path do
           =image_tag("owl1.png")
       %ul.nav
         %li
-          %a{href: root_path } Căutare
-          %a{href: pachete_path } Pachete
+          = link_to "Căutare", root_path
+          = link_to "Pachete", pachete_path
 
       = yield
     #footer
       %p
 
         Se caută prin #{question_count} întrebări. Ultima actualizare: #{last_sync_date}.
-        %a{href: "http://github.com/cuc-project/db"}
-          info
+        = link_to "info", "http://github.com/cuc-project/db"
     = render(partial: 'layouts/analytics') if Rails.env.production?
