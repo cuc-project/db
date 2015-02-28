@@ -17,10 +17,15 @@ def import_questions
 
   # Parse the CSV
   csv = CSV.new(seeds, :headers => true, :header_converters => :symbol, :converters => :all)
+  binding.pry
   data = csv.to_a
   data.map!(&:to_hash)
   data.each{ |item| item.delete(:timestamp) }
   data = data.delete_if { |item| item[:number] == nil }
+  data.each{ |item|
+    p item[:game_slug]
+    item[:game_id] = Game.find_by(game_slug: item[:game_slug]).try(:id)
+  }
 
   p "Imported #{data.size} questions"
   Question.destroy_all
@@ -38,10 +43,7 @@ def import_competitions
   data.reject!{ |row| row[0].nil? }
   data.map!(&:to_hash)
   data.each{ |item| item.delete(:timestamp) }
-  binding.pry
   data.each{ |item| item[:date] = DateTime.strptime(item[:date], "%m/%e/%Y") }
-
-  binding.pry
 
   p "Imported #{data.size} games"
   Game.destroy_all
