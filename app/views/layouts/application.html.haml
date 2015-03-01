@@ -22,6 +22,6 @@
     #footer
       %p
 
-        Se caută prin #{question_count} întrebări. Ultima actualizare: #{last_sync_date.strftime("%m/%d/%Y")}.
+        Se caută prin #{question_count} întrebări. Ultima actualizare: #{last_sync_date}.
         = link_to "info", "http://github.com/cuc-project/db"
     = render(partial: 'layouts/analytics') if Rails.env.production?

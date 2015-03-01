@@ -1,3 +1,5 @@
+include ActionView::Helpers::DateHelper
+
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -11,6 +13,6 @@ class ApplicationController < ActionController::Base
   end
 
   def last_sync_date
-    Question.first.created_at
+    time_ago_in_words Question.first.created_at
   end
 end
