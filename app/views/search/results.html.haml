@@ -1,7 +1,7 @@
 %form.search{ action: "search", method: :get}
   = text_field_tag(:query, nil, placeholder:"Caută în textul intrebării", autocomplete: 'off', value: @terms)
 #results
-  %p.found
+  %h6
     #{page_entries_info @results}
   %ul
     - @results.each do |result|

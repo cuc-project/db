@@ -1,0 +1,9 @@
+#results
+  %ul
+    = render @questions
+  = paginate @questions
+:coffeescript
+  $ ->
+    $(".collapsed").click ->
+      $(@).siblings(".extras").toggleClass("hidden")
+      $(@).find("i").toggleClass("fa-angle-double-down")

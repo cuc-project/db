@@ -19,3 +19,4 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 GOOGLE_DRIVE_URL: "gdrive_url"
+GOOGLE_COMPETITIONS_URL: "gcompetitions_url"
