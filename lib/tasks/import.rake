@@ -17,7 +17,6 @@ def import_questions
 
   # Parse the CSV
   csv = CSV.new(seeds, :headers => true, :header_converters => :symbol, :converters => :all)
-  binding.pry
   data = csv.to_a
   data.map!(&:to_hash)
   data.each{ |item| item.delete(:timestamp) }

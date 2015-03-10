@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://eu.yarp.io'
 ruby '2.1.2'
 gem 'rails', '4.1.7'
 gem 'sass-rails', '~> 4.0.3'
