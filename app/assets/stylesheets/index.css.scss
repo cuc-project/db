@@ -26,7 +26,6 @@ hr {
   border: 0;
 }
 
-
 html {
   @extend %extend_1;
 }
@@ -206,15 +205,37 @@ nav {
 span.match {
   color: $color_cornflower_blue_approx;
 }
-p.found {
-  color: $color_celeste_approx;
+h6 {
+  color: $color_mountain_mist_approx;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 5px;
+  font-size: 12pt;
+  font-weight: 400;
 }
 input.error {
   border: 2px solid $color_sea_pink_approx;
   &:focus {
     border: 2px solid $color_sea_pink_approx;
+  }
+}
+
+#games {
+  margin: auto;
+  width: 700px;
+  .title {
+
+  }
+  ul {
+    li {
+      a {
+        text-decoration: none;
+        color: $black;
+        &:hover {
+          border-bottom: 1px dotted $color_cornflower_blue_approx;
+        }
+      }
+      padding: 5px;
+    }
   }
 }

@@ -5,5 +5,6 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @questions = @game.questions.page(params[:page])
   end
 end
